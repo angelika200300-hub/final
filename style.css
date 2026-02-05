@@ -37,6 +37,20 @@ h1 {
   width: 320px;
 }
 
+.aside,
+.menuMobileShow,
+.menuMailMobile,
+.menuCallMobile,
+.menuMail,
+.menuCall {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  min-height: 100vh;
+  width: 320px;
+}
+
 .menuMailMobile,
 .menuCallMobile {
   z-index: 3;
@@ -63,7 +77,7 @@ h1 {
 
 .aside_header.mobile {
   border-bottom: none;
-  height: 60px;
+  height: 59px;
 }
 
 .aside .aside_header {
@@ -312,19 +326,47 @@ button:active {transform: scale(1.10);transition-duration: 0.5s;}
   list-style: none;
   width: 143px;
   color: #7E7E82;
-  padding: 0 0 32px 0;
+  padding-bottom: 10px;
 }
 
 .aside_navigateMenu_item {
-  padding: 0 0 40px 20px;
-    display: flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
   color: #1B1C21;
-  padding: 0 0 32px 20px;
+  height: 50px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
 }
 
+.active a {color: #7E7E82;}
+
+a {text-decoration: none;
+color: #1B1C21;}
+
+
+li:hover {
+  background-color: #ff3e79;
+  color: #1B1C21;
+}
+
+li:active {
+  background-color: rgba(255, 62, 121, 0.6); 
+  color: #1B1C21;                      
+}
+
+li.active:hover{
+  background-color: #ffffff;
+  color: #7E7E82;
+}
+
+li.headerNavigateMenu:hover {
+background-color: #41f6d7;
+  color: #1B1C21;
+}
+
+li.headerNavigateMenu:active {
+  background-color: rgba(65, 246, 215, 0.6);
+  color: #1B1C21;                      
+}
 
 .aside_fotter {
   bottom: 20px;
@@ -457,6 +499,10 @@ display: flex;
 
 .buttonBrands.technic {
   height: 160px;
+}
+
+.buttonBrands.tableMobile {
+  width: 300px;
 }
 
 .technicTitle {
@@ -638,15 +684,20 @@ display: flex;
 
 .aside {display: none;}
 
-.menuMobile,
-.menuMail,
-.menuCall,
-.menuMailMobile,
-.menuCallMobile {z-index: 2; display: none;}
+.menuMobile {z-index: 2; display: none;}
 
+.menuMobileShow,
+.menuCallMobile,
+.menuMailMobile,
+.menuCall,
+.menuMail {z-index: 2;}
+
+.menuCallMobileShow,
+.menuCallShow,
+.menuMailMobileShow,
+.menuMailShow {display: none;}
 
 .overlay {
-  display: none;
  position: absolute;
   top: 0;
   left: 0;
@@ -654,6 +705,10 @@ display: flex;
   bottom: 0;
   background: rgba(255,255,255, 0.9);
   height: 1900px;
+}
+
+.overlayShow {
+  display: none;
 }
 
 .buttonTableRepair {display: flex;  flex-direction: column; justify-content: flex-end; height: 135px;}
@@ -793,6 +848,8 @@ display: flex;
 .menuMailMobile,
 .menuCallMobile {width: 100vw;}
 
+.menuMobileShow {width: 100vw;}
+
 .overlay {
   height: 2000px;
 }
@@ -808,10 +865,21 @@ display: flex;
 }
 
 @media screen and (min-width: 361px) {
-  .menuMobile {
+  .menuMobileShow {
     width: 360px;
     box-shadow: 40px 0 30px -12px rgba(0, 0, 0, .2);
   }
+
+  .aside_body.mobile {height: 90vh; 
+}
+}
+
+@media screen and (min-width: 1440px) {
+  .menuMobileShow,
+  .menuCallMobile,
+
+  .menuMailMobile,
+  .overlayShow {display: none;}
 
   .aside_body.mobile {height: 90vh; 
 }
@@ -843,7 +911,13 @@ display: flex;
 
 .services_title {width: 268px;}
 
-.services_buttons {display: flex;}
+.services_buttons {display: flex; width: 387px; justify-content: space-between;}
+
+.services_buttons_repair,
+.services_buttons_checkstatus {
+  display: flex;
+  align-items: center;
+}
 
 .services_buttons .buttonImage {
   display: flex;
