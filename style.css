@@ -115,6 +115,12 @@ h1 {
   width: 288px;
 }
 
+.technicTitle.repair.mobile{
+position: relative;
+top: 0;
+}
+
+
 .menuMailTitle {
   font-size: 24px;
   font-weight: bold;
@@ -223,7 +229,7 @@ width: 376px;
 
 .dropdown.FormMenu {
   position: absolute;
-  top: -19px;
+  top: -18px;
   right: -3px;
 }
 
