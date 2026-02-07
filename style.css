@@ -103,7 +103,9 @@ h1 {
   border-radius: 50%;
   background-color: #ff3e79;
   border: #ff3e79;
+  cursor: pointer;
 }
+
 
 .FormMenu {
   margin: 0 auto;
@@ -299,7 +301,14 @@ button:active {transform: scale(1.10);transition-duration: 0.5s;}
   padding: 8px 18px 8px 18px;
 }
 
-.navigateMenu_item.active { 
+li.navigateMenu_item.active { 
+  border: 2px solid #B8FFEC;
+  padding: 6px 15px 6px 15px;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+li.headerNavigateMenu:hover { 
   border: 2px solid #B8FFEC;
   padding: 6px 15px 6px 15px;
   border-radius: 6px;
@@ -343,29 +352,25 @@ a {text-decoration: none;
 color: #1B1C21;}
 
 
-li:hover {
-  background-color: #ff3e79;
-  color: #1B1C21;
+li.aside_navigateMenu_item:hover {
+  border-left: 5px solid #41f6d7;
+color: #7E7E82;  
 }
 
-li:active {
-  background-color: rgba(255, 62, 121, 0.6); 
-  color: #1B1C21;                      
+li.aside_navigateMenu_item:active {
+  background-color: rgba(65, 246, 215, 0.6);           
 }
 
-li.active:hover{
-  background-color: #ffffff;
+li.aside_navigateMenu_item.active {
+  border-left: 5px solid #41f6d7;
   color: #7E7E82;
 }
 
-li.headerNavigateMenu:hover {
-background-color: #41f6d7;
-  color: #1B1C21;
-}
+a:active {
+color: #7E7E82;}
 
-li.headerNavigateMenu:active {
-  background-color: rgba(65, 246, 215, 0.6);
-  color: #1B1C21;                      
+li.headerNavigateMenu:hover{
+
 }
 
 .aside_fotter {
@@ -776,6 +781,10 @@ display: flex;
   background-color: #b5b6bc;
 }
 
+.tablemobile
+{display: flex;
+width: 260px;}
+
 .fade {
   position: absolute;
   z-index: 2;
@@ -819,15 +828,15 @@ display: flex;
 
 .buttonBrands.repair {width: 119px;} 
 
-.buttonBrands.table {position: relative; right: 158px; top: 62px;}
+.buttonBrands.table {position: absolute; top: 110px;}
 
 .icon.repair {width: 119px;}
 
-.technicTitle.repair {padding-left: 15px;}
+.technicTitle.repair {padding-left: 15px; position: relative; top: 7px;}
 
 .technicTitle.repair.mobile {padding-left: 0;}
 
-.dropdown_repair {padding-right: 15px;}
+.dropdown_repair {padding-right: 15px; top: 8px;}
 
 .swiper-pagination {position: static;}
 
