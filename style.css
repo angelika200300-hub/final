@@ -106,6 +106,10 @@ h1 {
   cursor: pointer;
 }
 
+.buttonRead,
+.expand {cursor: pointer;}
+
+
 
 .FormMenu {
   margin: 0 auto;
@@ -227,9 +231,15 @@ width: 376px;
   width: 99px;
 }
 
-.dropdown.FormMenu {
+.dropdown.FormMenuMobile {
   position: absolute;
   top: -27px;
+  right: -3px;
+}
+
+.dropdown.FormMenuPK {
+  position: absolute;
+  top: -19px;
   right: -3px;
 }
 
@@ -327,7 +337,7 @@ li.headerNavigateMenu:hover {
 
 .aside_body {
   background-color: #ffffff;
-  height: 90vh;
+  height: 87vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -908,7 +918,7 @@ width: 260px;}
     border-left: 1px solid #D9FFF5;
   }
 
-  .aside_body.mobile {height: 90vh; 
+  .aside_body.mobile {height: 87vh; 
 }
 }
 
