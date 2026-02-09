@@ -236,7 +236,7 @@ width: 376px;
 
 .dropdown.FormMenuMobile {
   position: absolute;
-  top: -27px;
+  top: -20px;
   right: -3px;
 }
 
@@ -598,6 +598,12 @@ display: flex;
 .modal,
 .show {
   display: none;
+}
+
+.more {
+  position: relative;
+  left: 10px;
+  top: -6px;
 }
 
 .brands_button_mobile {display: none;}
